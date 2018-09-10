@@ -1,0 +1,54 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20180910215235)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "dob" varchar, "password_digest" varchar, "zodiac_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180910215235_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (284.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180910215235"]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (188.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateZodiacs (20180910215640)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "zodiacs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_name" varchar, "description" varchar, "dob" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180910215640_create_zodiacs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180910215640"]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateDrinks (20180910220213)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "drink_name" varchar, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180910220213_create_drinks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180910220213"]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateZodiacDrinks (20180910220516)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "zodiac_drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_id" integer, "drink_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180910220516_create_zodiac_drinks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180910220516"]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-10 22:20:37.353111"], ["updated_at", "2018-09-10 22:20:37.353111"]]
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23

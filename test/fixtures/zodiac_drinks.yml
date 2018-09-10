@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zodiac_id: 1
+  drink_id: 1
+
+two:
+  zodiac_id: 1
+  drink_id: 1
