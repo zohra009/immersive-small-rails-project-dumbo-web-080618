@@ -52,3 +52,45 @@ Migrating to CreateZodiacDrinks (20180910220516)
   ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mZodiac Create (19.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries"], ["description", "the best"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-10 22:49:50.648160"], ["updated_at", "2018-09-10 22:49:50.648160"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (259.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries"], ["description", "the best"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-10 22:49:50.931216"], ["updated_at", "2018-09-10 22:49:50.931216"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (243.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries"], ["description", "the best"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-10 22:49:51.178280"], ["updated_at", "2018-09-10 22:49:51.178280"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (149.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries"], ["description", "the best"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-10 22:49:51.331312"], ["updated_at", "2018-09-10 22:49:51.331312"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries"], ["description", "the best"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-10 22:49:51.348196"], ["updated_at", "2018-09-10 22:49:51.348196"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
