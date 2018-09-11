@@ -1,0 +1,5 @@
+<h2>Welcome to Booza Rooza Page</h2>
+
+<% @drinks.each do |drink| %>
+<li><%= link_to drink.drink_name, drink %></li>
+<% end %>

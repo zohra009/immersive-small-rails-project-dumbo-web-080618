@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :zodiacs
   resources :zodiac_drinks
-  resources :drink
+  resources :drinks
 
 
 

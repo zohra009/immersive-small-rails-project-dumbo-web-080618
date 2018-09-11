@@ -3,6 +3,7 @@ class CreateZodiacs < ActiveRecord::Migration[5.2]
     create_table :zodiacs do |t|
       t.string :zodiac_name
       t.string :description
+      t.string :img_url
       t.string :dob
 
       t.timestamps
