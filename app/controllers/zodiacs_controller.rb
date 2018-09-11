@@ -1,0 +1,3 @@
+class ZodiacsController <ApplicationController
+
+end
