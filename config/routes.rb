@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :zodiacs
   resources :zodiac_drinks
-  resources :drink
-  resources :homepages
+  resources :drinks
   resources :sessions
 
   get '/home', to: 'sessions#index'
