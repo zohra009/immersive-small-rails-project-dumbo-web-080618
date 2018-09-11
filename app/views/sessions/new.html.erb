@@ -1,9 +1,11 @@
-<%= form_tag("/sessions") do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+<% if flash[:message] %>
+<h1><%= flash[:message => "You Suck"] %></h1>
+<% end %>
+
+<%= form_tag ('/sessions') do %>
+  <%= label_tag :email %>
+  <%= email_field_tag :email %><br>
   <%= label_tag :password %>
-  <%= text_field_tag :password %>
-  <%= label_tag :dob %>
-  <%= date_field :dob %>
+  <%= password_field_tag :password %><br>
   <%= submit_tag "ZoDo Sesame" %>
 <% end %>

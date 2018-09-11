@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
-  # Logging in
+  def index
+
+  end
+
   def new
     # GET /login
     render :new
@@ -10,19 +13,22 @@ class SessionsController < ApplicationController
     # POST /sessions
     # byebug
 
-    @user = User.find_by(username: params["username"])
+    @user = User.find_by(email: params["email"])
 
     if @user && @user.authenticate(params["password"])
       # We're logged in
       session[:current_user_id] = @user.id
-      redirect_to repositories_path
+      redirect_to @user
     else
-      render :new
+      
+      redirect_to new_session_path
       # redirect_to "/login"
     end
   end
+
   def destroy
     session.delete :current_user_id
-    redirect_to "/login"
+    redirect_to @homepages
   end
+
 end

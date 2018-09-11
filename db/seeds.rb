@@ -23,27 +23,27 @@ margarita = Drink.create(drink_name: "Margarita", category: "Smokinn")
 gimlet = Drink.create(drink_name: "Gimlet", category: "Cosmystery")
 old_fashion = Drink.create(drink_name: "Old Fashion", category: "Pretentious")
 
-aries = Zodiac.create(zodiac_name: "Aries", description: 'Courageous, determined, confident, enthusiastic, optimistic, honest, passionate
-', dob: "March 21st - April 19th")
-taurus = Zodiac.create(zodiac_name: "Taurus", description: 'Reliable, patient, practical, devoted, responsible, stable
-', dob: "April 20th - May 20th")
-gemini = Zodiac.create(zodiac_name: "Gemini", description: 'Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas', dob: "May 21st - June 20th")
-cancer = Zodiac.create(zodiac_name: "Cancer", description: 'Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive
-', dob: "June 21st - July 22nd")
-leo = Zodiac.create(zodiac_name: "Leo", description: 'Creative, passionate, generous, warm-hearted, cheerful, humorous
-', dob: "July 23rd - August 22nd")
-virgo = Zodiac.create(zodiac_name: "Virgo", description: 'Loyal, analytical, kind, hardworking, practical
-', dob: "August 23rd - September 22nd")
-libra = Zodiac.create(zodiac_name: "Libra", description: 'Cooperative,diplomatic, gracious, fair-minded, social', dob: "September 23rd - October 22nd")
-scorpio = Zodiac.create(zodiac_name: "Scorpio", description: 'Resourceful, brave, passionate, stubborn, a true friend
-', dob: "October 23rd - November 21st")
-sagittarius = Zodiac.create(zodiac_name: "Sagittarius", description: 'Generous, idealistic, great sense of humor
-', dob: "November 22nd - December 21st")
-capricorn = Zodiac.create(zodiac_name: "Capricorn", description: 'Responsible, disciplined, self-control, good managers
-', dob: "December 22nd - January 19th")
-aquarius = Zodiac.create(zodiac_name: "Aquarius", description: 'Progressive, original, independent, humanitarian
+aquarius = Zodiac.create(zodiac_name: "Aquarius (January 20th - February 18th)", description: 'Progressive, original, independent, humanitarian
 ', dob: "January 20th - February 18th")
-pisces = Zodiac.create(zodiac_name: "Pisces", description: 'Compassionate, artistic, intuitive, gentle, wise, musica', dob: "February 19th - March 20th")
+pisces = Zodiac.create(zodiac_name: "Pisces (February 19th - March 20th)", description: 'Compassionate, artistic, intuitive, gentle, wise, musica', dob: "February 19th - March 20th")
+aries = Zodiac.create(zodiac_name: "Aries (March 21st - April 19th)", description: 'Courageous, determined, confident, enthusiastic, optimistic, honest, passionate
+', dob: "March 21st - April 19th")
+taurus = Zodiac.create(zodiac_name: "Taurus (April 20th - May 20th)", description: 'Reliable, patient, practical, devoted, responsible, stable
+', dob: "April 20th - May 20th")
+gemini = Zodiac.create(zodiac_name: "Gemini (May 21st - June 20th)", description: 'Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas', dob: "May 21st - June 20th")
+cancer = Zodiac.create(zodiac_name: "Cancer (June 21st - July 22nd)", description: 'Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive
+', dob: "June 21st - July 22nd")
+leo = Zodiac.create(zodiac_name: "Leo (June 21st - July 22nd)", description: 'Creative, passionate, generous, warm-hearted, cheerful, humorous
+', dob: "July 23rd - August 22nd")
+virgo = Zodiac.create(zodiac_name: "Virgo (August 23rd - September 22nd)", description: 'Loyal, analytical, kind, hardworking, practical
+', dob: "August 23rd - September 22nd")
+libra = Zodiac.create(zodiac_name: "Libra (September 23rd - October 22nd)", description: 'Cooperative,diplomatic, gracious, fair-minded, social', dob: "September 23rd - October 22nd")
+scorpio = Zodiac.create(zodiac_name: "Scorpio (October 23rd - November 21st)", description: 'Resourceful, brave, passionate, stubborn, a true friend
+', dob: "October 23rd - November 21st")
+sagittarius = Zodiac.create(zodiac_name: "Sagittarius (November 22nd - December 21st)", description: 'Generous, idealistic, great sense of humor
+', dob: "November 22nd - December 21st")
+capricorn = Zodiac.create(zodiac_name: "Capricorn (December 22nd - January 19th)", description: 'Responsible, disciplined, self-control, good managers
+', dob: "December 22nd - January 19th")
 
 zodiac_drink1 = ZodiacDrink.create(zodiac_id: aries, drink_id: hot_toddy)
 zodiac_drink2 = ZodiacDrink.create(zodiac_id: taurus, drink_id: cosmo)
@@ -58,7 +58,7 @@ zodiac_drink10 = ZodiacDrink.create(zodiac_id: capricorn, drink_id: old_fashion)
 zodiac_drink11 = ZodiacDrink.create(zodiac_id: aquarius, drink_id: manhattan)
 zodiac_drink12 = ZodiacDrink.create(zodiac_id: pisces, drink_id: malibu)
 
-user1 = User.create(name: "Haley", dob: "December 14", password: "haley123", zodiac_id: sagittarius)
-user2 = User.create(name: "Vadim", dob: "December 12", password: "vadim123", zodiac_id: sagittarius)
-user3 = User.create(name: "Zohra", dob: "May 30", password: "vadim123", zodiac_id: gemini)
-user3 = User.create(name: "Eben", dob: "February 20", password: "eben123", zodiac_id: pisces)
+user1 = User.create(name: "Haley", email: "haley@aol.com", password: "haley123", zodiac_id: sagittarius)
+user2 = User.create(name: "Vadim", email: "vadim@aol.com", password: "vadim123", zodiac_id: sagittarius)
+user3 = User.create(name: "Zohra", email: "zohra@aol.com", password: "vadim123", zodiac_id: gemini)
+user3 = User.create(name: "Eben", email: "eben@aol.com", password: "eben123", zodiac_id: pisces)

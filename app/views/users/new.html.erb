@@ -1,0 +1,22 @@
+<% if @user.errors.any? %>
+<% @user.errors.full_messages.each do |error| %>
+<%= error %>
+<% end %>
+<% end %>
+
+<h1>Make a user</h1>
+<%= form_for @user do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %><br>
+  <%= f.label "Email" %>
+  <%= f.email_field :email %><br>
+  <%= f.label "Password" %>
+  <%= f.password_field :password %><br>
+  <%= f.label "Star Sign" %>
+  <%= f.collection_select :zodiac_id, Zodiac.all, :id, :zodiac_name %>
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  </div>
+  <%= f.submit %>
+<% end %>

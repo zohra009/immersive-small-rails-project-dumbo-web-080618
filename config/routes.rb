@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :zodiacs
   resources :zodiac_drinks
   resources :drink
+  resources :homepages
+  resources :sessions
 
-
+  get '/home', to: 'sessions#index'
 
 end
