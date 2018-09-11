@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <% if flash[:message] %>
 <h1><%= flash[:message => "You Suck"] %></h1>
 <% end %>
@@ -6,12 +5,7 @@
 <%= form_tag ('/sessions') do %>
   <%= label_tag :email %>
   <%= email_field_tag :email %><br>
-=======
-<!-- <%= form_tag("/sessions") do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
->>>>>>> 5e3df90ab84c8f8c3ffbee6c754ff991d2fd4f2f
   <%= label_tag :password %>
   <%= password_field_tag :password %><br>
   <%= submit_tag "ZoDo Sesame" %>
-<% end %> -->
+<% end %>

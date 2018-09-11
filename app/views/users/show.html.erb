@@ -1,6 +1,6 @@
 <h1>User info</h1>
 <p>Name: <%= @user.name %></p>
-<p>Star Sign: <%= link_to @user.zodiac.zodiac_name, zodiac_path(@user.zodiac) %><p>
+<p>Star Sign: <%= link_to @user.zodiac_id.zodiac_name, zodiac_path(@user.zodiac) %><p>
 <%= link_to "Home", sessions_path %><br>
 <%= link_to "Edit User", edit_user_path %>
 <% if @user.image.attached? %>
