@@ -1,16 +1,41 @@
-<h1>Edit a user</h1>
-<%= form_for @user do |f| %>
-  <%= f.label "Name" %>
-  <%= f.text_field :name %><br>
-  <%= f.label "Email" %>
-  <%= f.email_field :email %><br>
-  <%= f.label "Password" %>
-  <%= f.password_field :password %><br>
-  <%= f.label "Star Sign" %>
-  <%= f.collection_select :zodiac_id, Zodiac.all, :id, :zodiac_name %>
-  <div class="field">
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  </div>
-  <%= f.submit %>
+
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+
+<% if @user.errors.any? %>
+<% @user.errors.full_messages.each do |error| %>
+<%= error %>
 <% end %>
+<% end %>
+<body id="new_user_body">
+  <div class="signup-form">
+    <h2>EDIT</h2>
+    <p class="hint-text">Make an error? Edit!</p>
+    <br>
+    <div class="form-group ">
+			<div class="row">
+        <%= form_for @user do |f| %>
+          <div class="col-xs-6">
+            <p><%= f.text_field :name, class: "form-control signup-input", placeholder: "Name" %></p>
+          </div>
+          <div class="col-xs-6">
+            <p><%= f.email_field :email, class: "form-control signup-input", placeholder: "Email" %></p>
+          </div>
+          <div class="col-xs-6">
+            <p><%= f.password_field :password, class: "form-control signup-input", placeholder: "Password" %></p>
+          </div>
+          <div class="col-xs-6">
+            <p><%= f.collection_select :zodiac_id, Zodiac.all, :id, :zodiac_name, class: "form-control collect-select" %></p>
+          </div>
+          <div class="col-xs-6">
+            <p><%= f.file_field :image, class: "form-control signup-input", placeholder: "Your photo" %></p>
+          </div>
+          <%= f.submit "Edit User", class:"btn btn-success btn-lg btn-block submit-button" %>
+          <div class="text-center">Want to delete your account? <%= link_to "Delete", @user, method: :delete %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</body>

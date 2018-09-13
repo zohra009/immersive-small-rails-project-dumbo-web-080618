@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
 
   def new
     # GET /login
+    @user = User.new
     render :new
   end
 
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to @user
     else
-      
+
       redirect_to new_session_path
       # redirect_to "/login"
     end
@@ -28,7 +29,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :current_user_id
-    redirect_to @homepages
+    redirect_to '/home'
   end
 
 end

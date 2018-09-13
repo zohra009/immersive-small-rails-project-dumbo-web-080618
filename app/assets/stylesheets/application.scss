@@ -1,0 +1,155 @@
+@import "bootstrap";
+
+// ********** create a new user ************
+
+#user_image {
+  border: solid 1px #eee;
+}
+
+#new_user {
+  // background-image: url("/images/back.jpg");
+  padding-bottom: 2%;
+  margin-top: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new_user_body {
+  background-image: url("/images/back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Poppins';
+}
+
+.form-control{
+		height: 40px;
+		box-shadow: none;
+		color: #969fa4;
+    width: 100%;
+	}
+
+  .form-control:focus{
+  border-color: #5cb85c;
+}
+
+  .form-control, .btn{
+    border-radius: 3px;
+  }
+
+  .signup-form{
+		width: 400px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+
+  .signup-form h2{
+  color: black;
+      margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+  }
+
+.signup-form h2:before, .signup-form h2:after{
+  content: "";
+  height: 2px;
+  width: 30%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.signup-form h2:before{
+  left: 0;
+}
+.signup-form h2:after{
+  right: 0;
+}
+  .signup-form .hint-text {
+  color: black;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.signup-form {
+  color: black;
+  border-radius: 3px;
+  margin-bottom: 15px;
+    background: #edc9b7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px 20px;
+    width: 420px;
+    margin-top: 5%;
+  }
+
+.signup-form .form-group{
+  margin-bottom: 20px;
+}
+
+.signup-form .btn{
+      font-size: 16px;
+      font-weight: bold;
+      min-width: 140px;
+      outline: none !important;
+      background-color: #d97b22 !important;
+      border: none !important;
+  }
+
+.row {
+  justify-content: center;
+}
+
+.signup-form .row div:first-child{
+  padding-right: 10px;
+}
+.signup-form .row div:last-child{
+  padding-left: 10px;
+}
+  .signup-form a{
+  color: #fff;
+  text-decoration: underline;
+}
+  .signup-form a:hover{
+  text-decoration: none;
+}
+.signup-form form a{
+  color: #d97b22;
+  text-decoration: none;
+}
+.signup-form form a:hover{
+  text-decoration: underline;
+}
+
+.signup-input {
+  width: 80%;
+  margin: 0 auto;
+}
+
+select#user_zodiac_id {
+  width: 80%;
+  margin-left: 41px;
+}
+
+.submit-button {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+  width: 80%;
+}
+
+.another-button {
+  width: 100% !important;
+}
+// ******************************
+
+// **********User Show Page*******
+.image {
+  height: 40%;
+  width: 40%;
+}
+
+.links {
+  align: inline-block;
+}
+// ******************************
