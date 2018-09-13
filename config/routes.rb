@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :zodiac_drinks
   resources :drinks
   resources :sessions, :path => "/home"
+  resources :user_drinks
 
   get '/home', to: 'sessions#index'
   get '/logout', to: 'sessions#destroy'

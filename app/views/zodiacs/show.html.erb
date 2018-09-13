@@ -1,9 +1,14 @@
- <!-- <img src=<%# @zodiac.img_url%> -->
- <%# image_tag("#{@zodiac.img_url}") %>
+<style>
+  body{
+    background:#d2a595;
+  }
+</style>
+ <%= image_tag("#{@zodiac.img_url}") %>
 
-<h3> Your Zodiac Sign Means You are: <%= @zodiac.description %> </h3>
+
+<h3> Your Zodiac Sign Means You an <%= @zodiac.category %> sign and you are <%= @zodiac.description %> </h3>
 
 <% @zodiac.drinks.each do |drink| %>
-<h3> Your zodiac sign is telling you, you need a <%= link_to drink.drink_name, drink %></h3>
-<h3>beacuase you're <%= drink.category %> AF!!</h3>
-  <% end %>
+  <h3> Your Zodiac sign is telling you, you need a <%= link_to drink.drink_name, drink %></h3>
+  <h3>because you're <%= drink.category %> AF!!</h3>
+<% end %>

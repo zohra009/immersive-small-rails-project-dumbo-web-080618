@@ -1,27 +1,28 @@
-
-
 <body>
-<h1>Welcome, <%= @user.name %>! </h1>
+  <h1>Welcome, <%= @user.name %>! </h1>
 
-<p>Your Sign: <%= link_to @user.zodiac.zodiac_name, zodiac_path(@user.zodiac) %><p>
+  <p>Your Sign: <%= link_to @user.zodiac.zodiac_name, zodiac_path(@user.zodiac) %><p>
 
-<% if @user.image.attached? %>
-<div class="picture">
-      <strong>Lookin' good</strong>
-      <br>
-      <%= image_tag @user.image, class: "image" %>
+  <% if @user.image.attached? %>
+  <div class="picture">
+        <strong>Lookin' good</strong>
+        <br>
+        <%= image_tag @user.image, class: "image" %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
-
+  <% end %>
 </body>
 
 <footer>
-<div class="links">
-<%= link_to "Home", sessions_path %>
-<%= link_to "Edit User", edit_user_path %>
-<%= link_to "Logout", '/logout', method: :delete %>
-</div>
-
+  <div class="links">
+    <%= link_to "Home", sessions_path %>
+    <%= link_to "Edit User", edit_user_path %>
+    <%= link_to "Logout", '/logout', method: :delete %>
+  </div>
 </footer>
+
+<h2>Drink List for your Sign</h2>
+<% @user.drinks.each do |drink| %>
+  <li><%= drink.drink_name %></li>
+<% end %>
