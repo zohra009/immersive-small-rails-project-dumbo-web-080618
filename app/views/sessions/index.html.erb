@@ -1,5 +1,18 @@
-<h1>MIXOLOGY BB</h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="sesh_index.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
 
-<%= link_to "Create a new user!", new_user_path %><br>
+<body>
 
-<%= link_to "Log in!!!!!!!!!!!", new_session_path %><br>
+
+  <div id="logopic">
+    <img src="images/Untitled-2.jpg">
+  </div>
+  <div class="login-create">
+  <%= link_to "LOG IN", new_session_path, class: "log-in" %>
+  <br>
+    <%=link_to "CREATE ACCOUNT", new_user_path, class: "create" %>
+  </div>
+
+</body>

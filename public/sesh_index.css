@@ -1,0 +1,38 @@
+
+body {
+  background-image: url("/images/background.jpg");
+  background-size: auto;
+}
+
+#logopic {
+  float: right;
+  padding-right: 30%;
+  margin-top: 1%;
+}
+
+.container {
+  padding-left: 65%;
+  position: absolute;
+  top: 330px;
+  right: 80px;
+}
+
+.login-create {
+  display: inline-block;
+  padding-left: 66%;
+  text-align: right;
+}
+
+.create {
+  /* margin-left: 68%; */
+  color: #d97b22;
+  font-family: 'Poppins';
+  font-size: 17px;
+}
+
+.log-in {
+  /* margin-left: 73%; */
+  color: #c27a3c;
+  font-family: 'Poppins';
+  font-size: 17px;
+}

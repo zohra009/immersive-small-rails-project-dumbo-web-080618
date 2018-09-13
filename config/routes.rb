@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :zodiacs
   resources :zodiac_drinks
   resources :drinks
-  resources :sessions
+  resources :sessions, :path => "/home"
 
   get '/home', to: 'sessions#index'
-
+  get '/logout', to: 'sessions#destroy'
 end
