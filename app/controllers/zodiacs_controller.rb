@@ -1,5 +1,4 @@
 class ZodiacsController <ApplicationController
-
   def index
     # byebug
     @zodiacs = Zodiac.all
@@ -9,4 +8,6 @@ class ZodiacsController <ApplicationController
     @zodiac = Zodiac.find(params[:id])
     render :show
   end
+
+
 end
