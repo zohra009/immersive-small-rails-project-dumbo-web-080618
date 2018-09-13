@@ -29781,3 +29781,657 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 134ms (Views: 130.0ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/users/14" for 127.0.0.1 at 2018-09-13 16:32:45 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mZodiac Load (0.7ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[36mDrink Load (1.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" INNER JOIN "user_drinks" ON "drinks"."id" = "user_drinks"."drink_id" WHERE "user_drinks"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (245.8ms)
+Completed 200 OK in 1022ms (Views: 825.0ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 16:51:11 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (7.1ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:3
+  Rendered zodiacs/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 224ms (Views: 195.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 16:51:39 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.7ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 110.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 16:58:18 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (1.1ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 334ms (Views: 324.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 16:58:24 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.7ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 93ms (Views: 89.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:07:47 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.6ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 13252ms (Views: 13190.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:08:56 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.7ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 139ms (Views: 134.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:09:41 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.3ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 130ms (Views: 124.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:09:45 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.3ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 101ms (Views: 97.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:10:04 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.3ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 151ms (Views: 146.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:10:12 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.4ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:10:29 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.4ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 94ms (Views: 88.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/zodiacs/1" for 127.0.0.1 at 2018-09-13 18:12:45 -0400
+Processing by ZodiacsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mZodiac Load (0.7ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/zodiacs_controller.rb:8
+Completed 404 Not Found in 138ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Zodiac with 'id'=1):
+  
+app/controllers/zodiacs_controller.rb:8:in `show'
+Started GET "/zodiacs/12" for 127.0.0.1 at 2018-09-13 18:12:52 -0400
+Processing by ZodiacsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mZodiac Load (0.2ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/zodiacs_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Zodiac with 'id'=12):
+  
+app/controllers/zodiacs_controller.rb:8:in `show'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (41.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  ↳ db/schema.rb:25
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "drinks"[0m
+  ↳ db/schema.rb:36
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "drink_name" varchar, "category" varchar, "img_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_drinks"[0m
+  ↳ db/schema.rb:44
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "user_drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "drink_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:51
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "zodiac_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "zodiac_drinks"[0m
+  ↳ db/schema.rb:60
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "zodiac_drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_id" integer, "drink_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "zodiacs"[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "zodiacs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_name" varchar, "description" varchar, "img_url" varchar, "dob" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180912153820)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (17.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180910215235),
+(20180910215640),
+(20180910220213),
+(20180910220516),
+(20180911190654);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-13 22:13:31.242443"], ["updated_at", "2018-09-13 22:13:31.242443"]]
+  ↳ db/schema.rb:13
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  ↳ db/schema.rb:25
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "drinks"[0m
+  ↳ db/schema.rb:36
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "drink_name" varchar, "category" varchar, "img_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_drinks"[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "user_drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "drink_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:51
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "zodiac_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "zodiac_drinks"[0m
+  ↳ db/schema.rb:60
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "zodiac_drinks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_id" integer, "drink_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "zodiacs"[0m
+  ↳ db/schema.rb:67
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "zodiacs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "zodiac_name" varchar, "description" varchar, "img_url" varchar, "dob" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180912153820)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180910215235),
+(20180910215640),
+(20180910220213),
+(20180910220516),
+(20180911190654);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-13 22:13:31.382751"], ["updated_at", "2018-09-13 22:13:31.382751"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-09-13 22:13:31.388399"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mZodiac Load (0.3ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mZodiacDrink Load (0.2ms)[0m  [1m[34mSELECT "zodiac_drinks".* FROM "zodiac_drinks"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserDrink Load (0.2ms)[0m  [1m[34mSELECT "user_drinks".* FROM "user_drinks"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Cosmopolitian"], ["category", "Cosmystery"], ["img_url", "https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2017/10/cosmopolitan-cocktail-recipe.jpg"], ["created_at", "2018-09-13 22:13:31.629421"], ["updated_at", "2018-09-13 22:13:31.629421"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Cider"], ["category", "Seasonal lover"], ["img_url", "http://www.urbanorchardcider.com/wp-content/uploads/2016/10/Belgian-with-apples.jpg"], ["created_at", "2018-09-13 22:13:31.635333"], ["updated_at", "2018-09-13 22:13:31.635333"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mDrink Create (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Hot Toddy"], ["category", "Smokinn"], ["img_url", "https://theblondcook.com/wp-content/uploads/2012/10/hot-toddy-2.jpg"], ["created_at", "2018-09-13 22:13:31.640462"], ["updated_at", "2018-09-13 22:13:31.640462"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Manhattan"], ["category", "Classy"], ["img_url", "https://magicskillet.com/wp-content/uploads/2014/08/the-manhattan-cocktail.jpg"], ["created_at", "2018-09-13 22:13:31.648798"], ["updated_at", "2018-09-13 22:13:31.648798"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "French Connection"], ["category", "Pretentious"], ["img_url", "https://78.media.tumblr.com/ef738e9bdf7ba4e4e5f036512b2be899/tumblr_inline_mpsibgkPer1qz4rgp.jpg"], ["created_at", "2018-09-13 22:13:31.655716"], ["updated_at", "2018-09-13 22:13:31.655716"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mDrink Create (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Incredible Hulk"], ["category", "Fireary"], ["img_url", "https://i.ytimg.com/vi/tRJmF2hbqVk/maxresdefault.jpg"], ["created_at", "2018-09-13 22:13:31.671781"], ["updated_at", "2018-09-13 22:13:31.671781"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mDrink Create (1.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Jack Rose"], ["category", "Pretentious"], ["img_url", "https://cdn.liquor.com/wp-content/uploads/2016/09/23120559/jack-rose-recipe.jpg"], ["created_at", "2018-09-13 22:13:31.682959"], ["updated_at", "2018-09-13 22:13:31.682959"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Paradise"], ["category", "Classy"], ["img_url", "https://i.ytimg.com/vi/3sMEr6K10AQ/hqdefault.jpg"], ["created_at", "2018-09-13 22:13:31.692306"], ["updated_at", "2018-09-13 22:13:31.692306"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Pisco Sour"], ["category", "Cosmystery"], ["img_url", "http://blog.angosturabitters.com/wp-content/uploads/2014/04/PiscoSour.jpg"], ["created_at", "2018-09-13 22:13:31.699002"], ["updated_at", "2018-09-13 22:13:31.699002"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Sex on the Beach"], ["category", "Winning"], ["img_url", "https://i.ytimg.com/vi/KwkcKSwymro/maxresdefault.jpg"], ["created_at", "2018-09-13 22:13:31.705078"], ["updated_at", "2018-09-13 22:13:31.705078"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Malibu"], ["category", "Seasonal Lover"], ["img_url", "https://www.homemadefoodjunkie.com/wp-content/uploads/2015/06/IMG_8042.jpg"], ["created_at", "2018-09-13 22:13:31.714398"], ["updated_at", "2018-09-13 22:13:31.714398"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (22.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Long Island Iced Tea"], ["category", "Fireary"], ["img_url", "https://i.ytimg.com/vi/cUZTStHFePw/maxresdefault.jpg"], ["created_at", "2018-09-13 22:13:31.740414"], ["updated_at", "2018-09-13 22:13:31.740414"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Dirty Martini"], ["category", "Pretentious"], ["img_url", "https://www.mygourmetconnection.com/wp-content/uploads/dirty-martini.jpg"], ["created_at", "2018-09-13 22:13:31.746456"], ["updated_at", "2018-09-13 22:13:31.746456"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Margarita"], ["category", "Smokinn"], ["img_url", "https://mixthatdrink.com/wp-content/uploads/2009/02/margarita-600x900.jpg"], ["created_at", "2018-09-13 22:13:31.758971"], ["updated_at", "2018-09-13 22:13:31.758971"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Gimlet"], ["category", "Cosmystery"], ["img_url", "https://cdn.liquor.com/wp-content/uploads/2017/08/03170153/beefeater-basil-gimlet-2-720x720.jpg"], ["created_at", "2018-09-13 22:13:31.765259"], ["updated_at", "2018-09-13 22:13:31.765259"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("drink_name", "category", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["drink_name", "Old Fashion"], ["category", "Pretentious"], ["img_url", "https://cdn1.freshoffthegrid.com/wp-content/uploads/2016/05/Blackberry-Old-Fashioned-10.jpg"], ["created_at", "2018-09-13 22:13:31.771962"], ["updated_at", "2018-09-13 22:13:31.771962"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mZodiac Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aquarius (January 20th - February 18th)"], ["description", "Progressive, original, independent, humanitarian"], ["img_url", "https://www.astrology-zodiac-signs.com/images/aquarius.jpg"], ["dob", "January 20th - February 18th"], ["created_at", "2018-09-13 22:13:31.801935"], ["updated_at", "2018-09-13 22:13:31.801935"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mZodiac Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Pisces (February 19th - March 20th)"], ["description", "Compassionate, artistic, intuitive, gentle, wise, musica"], ["img_url", "http://www.astrology-zodiac-signs.com/images/pisces.jpg"], ["dob", "February 19th - March 20th"], ["created_at", "2018-09-13 22:13:31.808327"], ["updated_at", "2018-09-13 22:13:31.808327"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mZodiac Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Aries (March 21st - April 19th)"], ["description", "Courageous, determined, confident, enthusiastic, optimistic, honest, passionate\n"], ["img_url", "https://www.horoscope.com/images-US/signs/profile-aries.jpg"], ["dob", "March 21st - April 19th"], ["created_at", "2018-09-13 22:13:31.815375"], ["updated_at", "2018-09-13 22:13:31.815375"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mZodiac Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Taurus (April 20th - May 20th)"], ["description", "Reliable, patient, practical, devoted, responsible, stable\n"], ["img_url", "http://www.astrology-zodiac-signs.com/images/taurus.jpg"], ["dob", "April 20th - May 20th"], ["created_at", "2018-09-13 22:13:31.822768"], ["updated_at", "2018-09-13 22:13:31.822768"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[36mZodiac Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Gemini (May 21st - June 20th)"], ["description", "Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas"], ["img_url", "https://www.horoscope.com/images-US/signs/profile-gemini.png"], ["dob", "May 21st - June 20th"], ["created_at", "2018-09-13 22:13:31.830877"], ["updated_at", "2018-09-13 22:13:31.830877"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mZodiac Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Cancer (June 21st - July 22nd)"], ["description", "Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive\n"], ["img_url", "http://www.astrology-zodiac-signs.com/images/cancer.jpg"], ["dob", "June 21st - July 22nd"], ["created_at", "2018-09-13 22:13:31.838640"], ["updated_at", "2018-09-13 22:13:31.838640"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[36mZodiac Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Leo (June 21st - July 22nd)"], ["description", "Creative, passionate, generous, warm-hearted, cheerful, humorous\n"], ["img_url", "http://www.astrology-zodiac-signs.com/images/Leo-w.png"], ["dob", "July 23rd - August 22nd"], ["created_at", "2018-09-13 22:13:31.844140"], ["updated_at", "2018-09-13 22:13:31.844140"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[36mZodiac Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Virgo (August 23rd - September 22nd)"], ["description", "Loyal, analytical, kind, hardworking, practical\n"], ["img_url", "http://www.horoscope.com/images-US/signs/profile-virgo.png"], ["dob", "August 23rd - September 22nd"], ["created_at", "2018-09-13 22:13:31.849766"], ["updated_at", "2018-09-13 22:13:31.849766"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:54
+  [1m[36mZodiac Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Libra (September 23rd - October 22nd)"], ["description", "Cooperative,diplomatic, gracious, fair-minded, social"], ["img_url", "http://www.horoscope.com/images-US/signs/profile-libra.png"], ["dob", "September 23rd - October 22nd"], ["created_at", "2018-09-13 22:13:31.857413"], ["updated_at", "2018-09-13 22:13:31.857413"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Scorpio (October 23rd - November 21st)"], ["description", "Resourceful, brave, passionate, stubborn, a true friend\n"], ["img_url", "http://www.astrology-zodiac-signs.com/images/scorpio.jpg"], ["dob", "October 23rd - November 21st"], ["created_at", "2018-09-13 22:13:31.865254"], ["updated_at", "2018-09-13 22:13:31.865254"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[36mZodiac Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Sagittarius (November 22nd - December 21st)"], ["description", "Generous, idealistic, great sense of humor\n"], ["img_url", "http://www.astrology-zodiac-signs.com/images/sagittarius.jpg"], ["dob", "November 22nd - December 21st"], ["created_at", "2018-09-13 22:13:31.882096"], ["updated_at", "2018-09-13 22:13:31.882096"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:62
+  [1m[36mZodiac Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiacs" ("zodiac_name", "description", "img_url", "dob", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zodiac_name", "Capricorn (December 22nd - January 19th)"], ["description", "Responsible, disciplined, self-control, good managers\n"], ["img_url", "http://www.horoscope.com/images-US/signs/profile-capricorn.png"], ["dob", "December 22nd - January 19th"], ["created_at", "2018-09-13 22:13:31.892764"], ["updated_at", "2018-09-13 22:13:31.892764"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:66
+  [1m[36mZodiacDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 3], ["drink_id", 3], ["created_at", "2018-09-13 22:13:31.944386"], ["updated_at", "2018-09-13 22:13:31.944386"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:67
+  [1m[36mZodiacDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 4], ["drink_id", 1], ["created_at", "2018-09-13 22:13:31.950796"], ["updated_at", "2018-09-13 22:13:31.950796"]]
+  ↳ db/seeds.rb:67
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:68
+  [1m[36mZodiacDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 6], ["drink_id", 15], ["created_at", "2018-09-13 22:13:31.958659"], ["updated_at", "2018-09-13 22:13:31.958659"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[36mZodiacDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 5], ["drink_id", 14], ["created_at", "2018-09-13 22:13:31.968323"], ["updated_at", "2018-09-13 22:13:31.968323"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:70
+  [1m[36mZodiacDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 7], ["drink_id", 12], ["created_at", "2018-09-13 22:13:31.976699"], ["updated_at", "2018-09-13 22:13:31.976699"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:71
+  [1m[36mZodiacDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 8], ["drink_id", 5], ["created_at", "2018-09-13 22:13:31.985137"], ["updated_at", "2018-09-13 22:13:31.985137"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:72
+  [1m[36mZodiacDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 9], ["drink_id", 6], ["created_at", "2018-09-13 22:13:32.003198"], ["updated_at", "2018-09-13 22:13:32.003198"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:73
+  [1m[36mZodiacDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 10], ["drink_id", 9], ["created_at", "2018-09-13 22:13:32.010248"], ["updated_at", "2018-09-13 22:13:32.010248"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:74
+  [1m[36mZodiacDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 11], ["drink_id", 13], ["created_at", "2018-09-13 22:13:32.016770"], ["updated_at", "2018-09-13 22:13:32.016770"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[36mZodiacDrink Create (29.3ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 12], ["drink_id", 16], ["created_at", "2018-09-13 22:13:32.023698"], ["updated_at", "2018-09-13 22:13:32.023698"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:76
+  [1m[36mZodiacDrink Create (0.6ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 1], ["drink_id", 4], ["created_at", "2018-09-13 22:13:32.080199"], ["updated_at", "2018-09-13 22:13:32.080199"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:76
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:77
+  [1m[36mZodiacDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "zodiac_drinks" ("zodiac_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["zodiac_id", 2], ["drink_id", 11], ["created_at", "2018-09-13 22:13:32.087463"], ["updated_at", "2018-09-13 22:13:32.087463"]]
+  ↳ db/seeds.rb:77
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:80
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "haley@aol.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mZodiac Load (0.3ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "zodiac_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Haley"], ["email", "haley@aol.com"], ["password_digest", "haley123"], ["zodiac_id", 11], ["created_at", "2018-09-13 22:13:32.155294"], ["updated_at", "2018-09-13 22:13:32.155294"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:81
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vadim@aol.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:81
+  [1m[36mZodiac Load (0.1ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:81
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "zodiac_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Vadim"], ["email", "vadim@aol.com"], ["password_digest", "vadim123"], ["zodiac_id", 11], ["created_at", "2018-09-13 22:13:32.163223"], ["updated_at", "2018-09-13 22:13:32.163223"]]
+  ↳ db/seeds.rb:81
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:81
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "zohra@aol.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mZodiac Load (0.2ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "zodiac_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Zohra"], ["email", "zohra@aol.com"], ["password_digest", "vadim123"], ["zodiac_id", 5], ["created_at", "2018-09-13 22:13:32.170426"], ["updated_at", "2018-09-13 22:13:32.170426"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:83
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "eben@aol.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mZodiac Load (0.2ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "zodiac_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Eben"], ["email", "eben@aol.com"], ["password_digest", "eben123"], ["zodiac_id", 2], ["created_at", "2018-09-13 22:13:32.178659"], ["updated_at", "2018-09-13 22:13:32.178659"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mUserDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["drink_id", 1], ["created_at", "2018-09-13 22:13:32.206761"], ["updated_at", "2018-09-13 22:13:32.206761"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:94
+  [1m[36mUserDrink Create (0.4ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["drink_id", 2], ["created_at", "2018-09-13 22:13:32.217302"], ["updated_at", "2018-09-13 22:13:32.217302"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:95
+  [1m[36mUserDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["drink_id", 3], ["created_at", "2018-09-13 22:13:32.223012"], ["updated_at", "2018-09-13 22:13:32.223012"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:96
+  [1m[36mUserDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["drink_id", 4], ["created_at", "2018-09-13 22:13:32.230800"], ["updated_at", "2018-09-13 22:13:32.230800"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:97
+  [1m[36mUserDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["drink_id", 5], ["created_at", "2018-09-13 22:13:32.238678"], ["updated_at", "2018-09-13 22:13:32.238678"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:98
+  [1m[36mUserDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["drink_id", 6], ["created_at", "2018-09-13 22:13:32.243789"], ["updated_at", "2018-09-13 22:13:32.243789"]]
+  ↳ db/seeds.rb:98
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:99
+  [1m[36mUserDrink Create (0.3ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["drink_id", 9], ["created_at", "2018-09-13 22:13:32.250937"], ["updated_at", "2018-09-13 22:13:32.250937"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (35.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:100
+  [1m[36mUserDrink Create (0.5ms)[0m  [1m[32mINSERT INTO "user_drinks" ("user_id", "drink_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["drink_id", 15], ["created_at", "2018-09-13 22:13:32.293079"], ["updated_at", "2018-09-13 22:13:32.293079"]]
+  ↳ db/seeds.rb:100
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:100
+Started GET "/zodiacs/1" for 127.0.0.1 at 2018-09-13 18:13:42 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Zohra/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ZodiacsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mZodiac Load (0.2ms)[0m  [1m[34mSELECT  "zodiacs".* FROM "zodiacs" WHERE "zodiacs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/zodiacs_controller.rb:8
+  Rendering zodiacs/show.html.erb within layouts/application
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" INNER JOIN "zodiac_drinks" ON "drinks"."id" = "zodiac_drinks"."drink_id" WHERE "zodiac_drinks"."zodiac_id" = ?[0m  [["zodiac_id", 1]]
+  ↳ app/views/zodiacs/show.html.erb:11
+  Rendered zodiacs/show.html.erb within layouts/application (136.4ms)
+Completed 200 OK in 870ms (Views: 796.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/zodiacs" for 127.0.0.1 at 2018-09-13 18:13:53 -0400
+Processing by ZodiacsController#index as HTML
+  Rendering zodiacs/index.html.erb within layouts/application
+  [1m[36mZodiac Load (0.4ms)[0m  [1m[34mSELECT "zodiacs".* FROM "zodiacs"[0m
+  ↳ app/views/zodiacs/index.html.erb:9
+  Rendered zodiacs/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 0.4ms)
+
+
