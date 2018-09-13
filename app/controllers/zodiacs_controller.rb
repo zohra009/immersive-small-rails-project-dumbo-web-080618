@@ -7,6 +7,6 @@ class ZodiacsController <ApplicationController
 
   def show
     @zodiac = Zodiac.find(params[:id])
-    
+    render :show
   end
 end

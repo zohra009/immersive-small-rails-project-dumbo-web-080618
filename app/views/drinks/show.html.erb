@@ -1,5 +1,20 @@
-<h2>What this drink says about you...</h2>
+<%= image_tag("#{@drink.img_url}") %>
+  <% @drink.zodiacs.each do |name| %>
+  <%= name.img_url %>
+  <%= name.zodiac_name %>
+  <%= name.description %>
+  <% end %>
+<% @drink.users.each do |user| %>
+<h1><%= user.name %></h1>
+<% end %>
+<h2>You Need a Drink! </h2>
+<h3> Looks like you're drinking: <%= @drink.drink_name %></h3>
 
-<h3> hmm so you're drinking a... <%= @drink.drink_name %></h3>
-   <%= image_tag("#{@drink.img_url}") %>
+
 <h3> Surly you're not surprised that you are <%= @drink.category %>... what's up with that? </h3>
+
+<div><%= link_to "Create", new_drink_path(@drink) %></div>
+<div><%= link_to "Edit", edit_drink_path(@drink) %></div>
+
+<li> <%= button_to "Delete", @drink, method: "delete" %> </li>
+<%= link_to "Home Page", drinks_path %>

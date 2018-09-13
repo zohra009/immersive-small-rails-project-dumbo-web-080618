@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :zodiac_drinks
   resources :drinks
   resources :sessions
+  resources :user_drinks
+  
 
   get '/home', to: 'sessions#index'
 
