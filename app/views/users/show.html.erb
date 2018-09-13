@@ -10,3 +10,8 @@
   <%= image_tag @user.image %>
 </p>
 <% end %>
+
+<h2>Drink List for your Sign</h2>
+<% @user.drinks.each do |drink| %>
+<li><%= drink.drink_name %></li>
+<% end %>
