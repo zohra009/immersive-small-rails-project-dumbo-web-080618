@@ -1,28 +1,33 @@
-<body>
-  <h1>Welcome, <%= @user.name %>! </h1>
+<header>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</header>
 
-  <p>Your Sign: <%= link_to @user.zodiac.zodiac_name, zodiac_path(@user.zodiac) %><p>
+<body class="user-show">
+  <div class="user-show-div">
+  <h1>Welcome, <%= @user.name %>! </h1>
 
   <% if @user.image.attached? %>
   <div class="picture">
-        <strong>Lookin' good</strong>
-        <br>
         <%= image_tag @user.image, class: "image" %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</body>
-
-<footer>
-  <div class="links">
-    <%= link_to "Home", sessions_path %>
-    <%= link_to "Edit User", edit_user_path %>
-    <%= link_to "Logout", '/logout', method: :delete %>
   </div>
-</footer>
+  <br>
+    <p>Your Sign: <%= link_to @user.zodiac.zodiac_name, zodiac_path(@user.zodiac), class: "sign" %><p>
 
-<h2>Drink List for your Sign</h2>
-<% @user.drinks.each do |drink| %>
+  <% end %>
+
+  <h3>Your drinks</h3>
+  <% @user.drinks.each do |drink| %>
   <li><%= drink.drink_name %></li>
-<% end %>
+  <% end %>
+
+
+
+  <div class="llinks">
+    <%= link_to "EDIT ACCOUNT", edit_user_path, class: "links" %> |
+    <%= link_to "LOGOUT", '/logout', method: :delete, class: "links" %> |
+    <%= link_to "HOME", sessions_path, class: "links" %>
+  </div>
+  </div>
+</div>
+</div>
+</body>

@@ -77,10 +77,10 @@ zodiac_drink11 = ZodiacDrink.create(zodiac: aquarius, drink: manhattan)
 zodiac_drink12 = ZodiacDrink.create(zodiac: pisces, drink: malibu)
 
 #<------Users----------->
-user1 = User.create(name: "Haley", email: "haley@aol.com", password_digest: "haley123", zodiac_id: sagittarius.id)
-user2 = User.create(name: "Vadim", email: "vadim@aol.com", password_digest: "vadim123", zodiac_id: sagittarius.id)
-user3 = User.create(name: "Zohra", email: "zohra@aol.com", password_digest: "vadim123", zodiac_id: gemini.id)
-user4 = User.create(name: "Eben", email: "eben@aol.com", password_digest: "eben123", zodiac_id: pisces.id)
+user1 = User.create(name: "Haley", email: "haley@aol.com", password: "haley123", zodiac_id: sagittarius.id)
+user2 = User.create(name: "Vadim", email: "vadim@aol.com", password: "vadim123", zodiac_id: sagittarius.id)
+user3 = User.create(name: "Zohra", email: "zohra@aol.com", password: "vadim123", zodiac_id: gemini.id)
+user4 = User.create(name: "Eben", email: "eben@aol.com", password: "eben123", zodiac_id: pisces.id)
 
 #<--------------UserDrink Joint table------------->
 user_drink1 = UserDrink.create(user: user1, drink: cosmo)
