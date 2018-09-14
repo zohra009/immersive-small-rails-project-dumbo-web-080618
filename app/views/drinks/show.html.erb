@@ -1,3 +1,32 @@
+<style>
+  body{
+    background-image: url("https://i.pinimg.com/564x/24/e1/bc/24e1bca0b6c7aa85ed59d8bac03037bd.jpg");
+    color:#01104b;
+    font-family: 'Indie Flower';
+    padding-left: 13%;
+    padding-right: 13%;
+
+  }
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  a:link, a:visited {
+    background-color: #d2a595;
+    color: black;
+    padding: 5px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  </style>
+
+  <heading>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </heading>
+
 
 <% @drink.users.each do |user| %>
 <h1><%= user.name %></h1>
@@ -16,7 +45,7 @@
 
 <h3> Surely you're not surprised that you are <%= @drink.category %>... what's up with that? </h3>
 
-<div><%= link_to "Create", new_drink_path(@drink) %></div>
-<div><%= link_to "Edit", edit_drink_path(@drink) %></div>
-<div> <%= link_to "Delete", @drink, method: "delete" %> </div>
-<div><%= link_to "Home Page", drinks_path %></div><br></br>
+<div><i class="fas fa-beer"></i><%= link_to "Create", new_drink_path(@drink) %></div>
+<div><i class="fas fa-beer"></i><%= link_to "Edit", edit_drink_path(@drink) %></div>
+<div><i class="fas fa-beer"></i><%= link_to "Delete", @drink, method: "delete" %> </div>
+<div><i class="fas fa-beer"></i><%= link_to "Home Page", drinks_path %></div><br></br>
