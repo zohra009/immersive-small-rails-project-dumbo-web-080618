@@ -1,12 +1,33 @@
 <style>
-{
-background-color: : #d2a595;
-}
-</style>
+  body {
+    background-image: url("https://i.pinimg.com/564x/a4/f1/9b/a4f19b17ad5441fe638a071f70b160f7.jpg");
+    color:#01104b;
+    font-family: 'Indie Flower';
+    font-size: 25px;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
 
+  .box {
+    background-color: #d2a595;
+    color: black;
+    padding: 10px 15px;
+    display: inline-block;
+
+  }
+</style>
+<heading>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</heading>
+<body>
 <h1>Welcome to your Zodiac Page</h1>
 
+<div class="box">
 <% @zodiacs.each do |zodiac| %>
-<li><%= link_to zodiac.zodiac_name, zodiac %></li>
-
+<ul class="fa-ul">
+<li><i class="fa fa-eye"> </i><%= link_to zodiac.zodiac_name, zodiac %></li>
+</ul>
 <% end %>
+</div>
+</body>

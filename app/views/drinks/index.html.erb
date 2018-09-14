@@ -1,5 +1,39 @@
-<h2>Welcome to Booza Rooza Page</h2>
+<style>
+  body{
+    background-image: url("https://i.pinimg.com/564x/fb/79/16/fb79162284945c56839ab8ae1412a03b.jpg");
+    color:#01104b;
+    font-family: 'Indie Flower';
+    padding-left: 35%;
+    padding-right: 35%;
+
+  }
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  h2 {
+    text-decoration-style: bold;
+  }
+  a:link, a:visited {
+    background-color: #e9a1b9;
+    color: midnightblue;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+  }
+</style>
+
+  <heading>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </heading>
+
+
+
+<h2>Welcome to Cosmic Cocktails !!</h2>
 
 <% @drinks.each do |drink| %>
-<li><%= link_to drink.drink_name, drink %></li>
+  <div><i class="fas fa-beer"><%= link_to drink.drink_name, drink %></div>
 <% end %>

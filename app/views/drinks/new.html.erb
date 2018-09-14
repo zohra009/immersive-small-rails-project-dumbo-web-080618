@@ -1,14 +1,39 @@
-<h1>Create New Drink</h1>
+<style>
+  body{
+    background-image: url("https://i.pinimg.com/564x/24/e1/bc/24e1bca0b6c7aa85ed59d8bac03037bd.jpg");
+    color:#01104b;
+    font-family: 'Indie Flower';
+    padding-left: 33%;
+    padding-right: 33%;
+  }
+  a.hover {
+    color: purple;
+  }
+  div {
+    background-color: palevioletred;
+    width: 300px;
+    border: 2px solid mediumaquamarine;
+    padding-left: 18%;
+    padding-right: 18%;
+    padding-top: 0.0002%;
+    padding-bottom: 0.0002%;
+    margin: 20px;
+    text-align: center;
+  }
+</style>
+
+<h1>Create New Drinks !!</h1>
 
 <%= form_for @drink do |f| %>
-  <%= f.label "Drink Name" %>
-  <%= f.text_field :drink_name %>
+  <div><br></br>
+    <p><%= f.label "Drink Name" %></p>
+    <p><%= f.text_field :drink_name %></p>
 
-  <%= f.label "category" %>
-  <%= f.text_field :category %>
+    <p><%= f.label "category" %></p>
+    <p><%= f.text_field :category %></p>
 
-  <%= f.label "Pick Image" %>
-  <%= f.text_field :img_url %>
-
-  <%= f.submit "Add New Drink" %>
-  <% end %>
+    <p><%= f.label "Pick Image" %></p>
+    <p><%= f.text_field :img_url %></p><br></br>
+    <p><%= f.submit "Add New Drink" %></p><br></br>
+  </div>
+<% end %>
