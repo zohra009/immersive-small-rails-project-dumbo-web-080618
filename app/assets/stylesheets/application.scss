@@ -147,9 +147,38 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .image {
   height: 40%;
   width: 40%;
+  border-radius: 50%;
+}
+
+.llinks {
+  align: inline-block;
+  padding-top: 8%;
+  color: black;
+}
+
+.user-show {
+  background-image: url('eyeball.jpg')
+}
+
+.user-show-div {
+  margin-top: 10% !important;
+  background-color: rgb(237,201,183);
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  font-family: 'Poppins';
+  text-align: center;
+  padding-top: 2%;
+  border-radius: 15%;
+}
+
+.sign {
+  color: #c27a3c;
 }
 
 .links {
-  align: inline-block;
+  color: #c27a3c;
+  font-size: 15px;
 }
+
 // ******************************

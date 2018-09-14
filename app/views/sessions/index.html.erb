@@ -10,9 +10,15 @@
     <img src="images/Untitled-2.jpg">
   </div>
   <div class="login-create">
-  <%= link_to "LOG IN", new_session_path, class: "log-in" %>
-  <br>
+    <% if logged_in? %>
+      <%= link_to "LOGOUT", '/logout', method: :delete, class: "logout" %>
+    <% else %>
+    <%= link_to "LOG IN", new_session_path, class: "log-in" %>
+    <br/>
     <%=link_to "CREATE ACCOUNT", new_user_path, class: "create" %>
+
+    <% end %>
+  <br>
   </div>
 
 </body>
