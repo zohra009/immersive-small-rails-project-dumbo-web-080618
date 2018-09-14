@@ -13,17 +13,21 @@
     margin-right: auto;
     width: 70%;
   }
-  h2 {
-    text-decoration-style: bold;
-  }
-  a:link, a:visited {
-    background-color: #e9a1b9;
+
+#drink-index {
+    background-color: rgba(242,183,174, 0.9);
     color: midnightblue;
     padding: 6px 6px;
     text-align: center;
-    text-decoration: underline;
     display: inline-block;
+    margin-top: 8%;
+    border-radius: 20px;
   }
+
+#link {
+  color: #884d4c;
+}
+
 </style>
 
   <heading>
@@ -31,9 +35,13 @@
   </heading>
 
 
-
+<div id="drink-index">
 <h2>Welcome to Cosmic Cocktails !!</h2>
 
+<div id="link">
 <% @drinks.each do |drink| %>
-  <div><i class="fas fa-beer"><%= link_to drink.drink_name, drink %></div>
+  <i class="fas fa-beer"></i><%= link_to " #{drink.drink_name}", drink, id: "link" %><br>
 <% end %>
+</div>
+<%= link_to "Home", home_path %>
+</div>

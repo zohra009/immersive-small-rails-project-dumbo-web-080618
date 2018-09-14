@@ -4,30 +4,43 @@
     color:#01104b;
     font-family: 'Indie Flower';
     font-size: 25px;
-    padding-left: 12%;
-    padding-right: 12%;
   }
-  
+
 
   .box {
-    background-color: #d2a595;
+    background-color: rgba(242,183,174, 0.9);
     color: black;
     padding: 10px 15px;
     display: inline-block;
-
+    margin-top: 2%;
+    text-align: left;
+    border-radius: 20px;
   }
+
+  h1 {
+    text-align: center;
+  }
+
+  .links {
+    font-size: 20px;
+  }
+
 </style>
+
 <heading>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </heading>
-<body>
-<h1>Welcome to your Zodiac Page</h1>
 
-<div class="box">
-<% @zodiacs.each do |zodiac| %>
-<ul class="fa-ul">
-<li><i class="fa fa-eye"> </i><%= link_to zodiac.zodiac_name, zodiac %></li>
-</ul>
-<% end %>
-</div>
+<center>
+<body>
+  <div class="box">
+  <h1>Welcome to your Zodiac Page</h1>
+
+    <% @zodiacs.each do |zodiac| %>
+      <ul class="fa-ul">
+        <li><i class="fa fa-eye"> </i><%= link_to " #{zodiac.zodiac_name}", zodiac, class: "links" %></li>
+      </ul>
+    <% end %>
+  </div>
 </body>
+</center>

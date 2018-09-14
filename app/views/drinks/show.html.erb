@@ -12,14 +12,29 @@
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+    border-radius: 10px;
   }
-  a:link, a:visited {
+  /* a:link, a:visited {
     background-color: #d2a595;
     color: black;
     padding: 5px 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+  } */
+
+  #drink-div {
+    border-radius: 25px;
+    background-color: rgba(209,165,150, 0.8);
+    color: black;
+    padding: 5px 4px;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .drink-link {
+    color: black;
   }
   </style>
 
@@ -27,7 +42,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </heading>
 
-
+<div id="drink-div">
 <% @drink.users.each do |user| %>
 <h1><%= user.name %></h1>
 <% end %>
@@ -45,7 +60,10 @@
 
 <h3> Surely you're not surprised that you are <%= @drink.category %>... what's up with that? </h3>
 
-<div><i class="fas fa-beer"></i><%= link_to "Create", new_drink_path(@drink) %></div>
-<div><i class="fas fa-beer"></i><%= link_to "Edit", edit_drink_path(@drink) %></div>
-<div><i class="fas fa-beer"></i><%= link_to "Delete", @drink, method: "delete" %> </div>
-<div><i class="fas fa-beer"></i><%= link_to "Home Page", drinks_path %></div><br></br>
+
+<i class="fas fa-beer"></i><%= link_to " Edit this drink!", edit_drink_path(@drink), class: "drink-link" %><br>
+<i class="fas fa-beer"></i><%= link_to " Delete dis drink!", @drink, method: "delete", class: "drink-link" %><br>
+<i class="fas fa-beer"></i><%= link_to " Make a drink!", new_drink_path(@drink), class: "drink-link" %><br>
+<i class="fas fa-beer"></i><%= link_to " See all drinks!", drinks_path, class: "drink-link" %><br>
+<i class="fas fa-beer"></i><%= link_to " Your account!", @user, class: "drink-link" %>
+</div>

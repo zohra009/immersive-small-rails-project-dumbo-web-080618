@@ -4,7 +4,7 @@ class DrinksController <ApplicationController
   end
   def show
     @drink = Drink.find(params[:id])
-
+    @user = current_user
     render :show
   end
   def new

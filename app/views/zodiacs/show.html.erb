@@ -1,7 +1,7 @@
 <style>
   body{
     background-image: url("https://i.pinimg.com/564x/a4/f1/9b/a4f19b17ad5441fe638a071f70b160f7.jpg");
-    color:#01104b;
+    color: #01104b;
     font-family: 'Indie Flower';
     font-size: 40px;
     padding-left: 12%;
@@ -13,28 +13,43 @@
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-
+    margin-top: 2%;
   }
   a:link, a:visited {
-    background-color: #b29562;
-    color: black;
-    padding: 5px 15px;
+    /* background-color: #b29562; */
+    color: white;
+    /* padding: 5px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block; */
 }
 
 a:hover, a:active {
-    background-color: red;
+    color: #01104b;
+}
+
+.zodiac-show {
+  background-color: #edc9b7;
+  border-radius: 20px;
+  text-align: center;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 1%;
 }
 
 </style>
+
+
  <%= image_tag("#{@zodiac.img_url}") %>
 
-
-<h3> Your Zodiac Sign Means You an <%= @zodiac.category %> sign and you are <%= @zodiac.description %> </h3>
+<div class="zodiac-show">
+<h3> <strong><%= @zodiac.zodiac_name %></strong> means you're an <%= @zodiac.category %> sign. You're <%= @zodiac.description.downcase %>. </h3>
 
 <% @zodiac.drinks.each do |drink| %>
-  <h3> Your Zodiac sign is telling you, you need a <%= link_to drink.drink_name, drink %></h3>
-  <h3>because you're <%= drink.category %> AF!!</h3>
+  <h3> You need a <%= link_to drink.drink_name, drink %> because you're <%= drink.category %> AF!!</h3>
 <% end %>
+</div>
